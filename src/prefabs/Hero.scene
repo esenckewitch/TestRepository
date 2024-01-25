@@ -1,0 +1,30 @@
+{
+    "id": "82ab5bb1-96d7-4852-bf27-13f00b320c54",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": ""
+    },
+    "displayList": [
+        {
+            "type": "ArcadeSprite",
+            "id": "6bc92e2b-3ebd-4e37-b5cb-59bb7607f454",
+            "label": "arcadesprite_1",
+            "texture": {
+                "key": "Fall"
+            },
+            "x": 555,
+            "y": 297,
+            "body.width": 32,
+            "body.height": 32
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

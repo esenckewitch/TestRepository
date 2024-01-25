@@ -42,8 +42,8 @@
             "texture": {
                 "key": "Fall"
             },
-            "x": 142,
-            "y": 194,
+            "x": 1142,
+            "y": -11,
             "scaleX": 10,
             "scaleY": 10
         },
@@ -56,8 +56,26 @@
             ],
             "label": "prefab_1",
             "scope": "PUBLIC",
-            "x": 558,
-            "y": 115
+            "x": 1126,
+            "y": 308
+        },
+        {
+            "prefabId": "82ab5bb1-96d7-4852-bf27-13f00b320c54",
+            "id": "b40e0f90-8e1b-4819-9c34-5aa827c5dbe2",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY",
+                "collideWorldBounds"
+            ],
+            "label": "hero",
+            "scope": "PUBLIC",
+            "x": 395,
+            "y": 481,
+            "scaleX": 11,
+            "scaleY": 11,
+            "collideWorldBounds": true
         }
     ],
     "plainObjects": [],

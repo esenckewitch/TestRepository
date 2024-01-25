@@ -27,19 +27,27 @@ class Level extends Phaser.Scene {
 		colide.body.immovable = false;
 
 		// fall
-		const fall = this.add.image(142, 194, "Fall");
+		const fall = this.add.image(1142, -11, "Fall");
 		fall.scaleX = 10;
 		fall.scaleY = 10;
 
 		// prefab_1
-		const prefab_1 = new Prefab(this, 558, 115);
+		const prefab_1 = new Prefab(this, 1126, 308);
 		this.add.existing(prefab_1);
+
+		// hero
+		const hero = new Hero(this, 395, 481);
+		this.add.existing(hero);
+		hero.scaleX = 11;
+		hero.scaleY = 11;
+		hero.body.collideWorldBounds = true;
 
 		// lists
 		const colliders = [colide];
 		const players = [prefab, prefab_1];
 
 		this.prefab_1 = prefab_1;
+		this.hero = hero;
 		this.colliders = colliders;
 		this.players = players;
 
@@ -48,6 +56,8 @@ class Level extends Phaser.Scene {
 
 	/** @type {Prefab} */
 	prefab_1;
+	/** @type {Hero} */
+	hero;
 	/** @type {Colide[]} */
 	colliders;
 	/** @type {Prefab[]} */
@@ -61,9 +71,20 @@ class Level extends Phaser.Scene {
 		this.editorCreate();
 		this.physics.add.collider(this.players, this.colliders);
 		let camera = this.cameras.main;
-		camera.setViewport(0, 0, 1280, 720);
-		camera.startFollow(this.prefab_1);
-		camera.setPostPipeline()
+
+		// camera.setViewport(0, 0, 1280, 720);
+		// camera.startFollow(this.hero);
+		// camera.setPostPipeline()
+	}
+
+
+	/**
+	 * Добавляет элемент управления
+	 *
+	 * @param {"up" or "down"} state Состояние кнопки.
+	 */
+	addControl(key, state, func) {
+		this.input.keyboard.addKey(key).on(state, func);
 	}
 
 	update(){
