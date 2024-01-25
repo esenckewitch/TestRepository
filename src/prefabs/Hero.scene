@@ -1,34 +1,27 @@
 {
-    "id": "82ab5bb1-96d7-4852-bf27-13f00b320c54",
+    "id": "211b9828-14dc-47dc-bcc7-1d2ad91bef65",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
         "preloadPackFiles": [],
-        "createMethodName": ""
+        "createMethodName": "",
+        "borderWidth": 1280,
+        "borderHeight": 720
     },
     "displayList": [
         {
-            "type": "Container",
-            "id": "a3774f8c-395e-4f46-bc0a-a6c96f705728",
-            "label": "container_1",
-            "x": 555,
-            "y": 297,
-            "list": [
-                {
-                    "type": "SpineGameObject",
-                    "id": "fcd5e559-b450-4f34-9fd8-5a3adc278712",
-                    "label": "spinegameobject_1",
-                    "scope": "PUBLIC",
-                    "dataKey": "dog",
-                    "atlasKey": "dog-atlas",
-                    "skinName": "default",
-                    "x": -245,
-                    "y": -2,
-                    "ArcadeComponent.active": true,
-                    "body.width": 193.11641404372344,
-                    "body.height": 189.56380885575527
-                }
-            ]
+            "type": "SpineGameObject",
+            "id": "84e5e1d6-d554-4e78-a19d-83c85fb985a1",
+            "label": "dog",
+            "dataKey": "dog",
+            "atlasKey": "dog-atlas",
+            "skinName": "default",
+            "bpType": 1,
+            "x": 420,
+            "y": 201,
+            "ArcadeComponent.active": true,
+            "body.width": 193.11641404372344,
+            "body.height": 189.56380885575527
         }
     ],
     "plainObjects": [],

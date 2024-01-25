@@ -37,18 +37,6 @@
             "body.offset.y": 119
         },
         {
-            "prefabId": "82ab5bb1-96d7-4852-bf27-13f00b320c54",
-            "id": "d8a31456-d475-4648-a892-af211cd21ad7",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "hero",
-            "scope": "PUBLIC",
-            "x": 437,
-            "y": 322
-        },
-        {
             "prefabId": "81318de6-bf21-46d7-9abe-0dd0ea4cb14a",
             "id": "8dc92328-497e-4ccb-a005-71ff31d20ce8",
             "unlock": [
@@ -62,6 +50,18 @@
             "y": 550,
             "scaleX": 0.3,
             "scaleY": 0.3
+        },
+        {
+            "prefabId": "211b9828-14dc-47dc-bcc7-1d2ad91bef65",
+            "id": "f35d86f5-567a-4989-bbdc-2af072f1aa12",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "hero",
+            "scope": "CLASS",
+            "x": 687,
+            "y": 228
         }
     ],
     "plainObjects": [],
@@ -84,7 +84,7 @@
             "id": "b218aee8-8685-4029-8b75-92b24223247f",
             "label": "players",
             "objectIds": [
-                "d8a31456-d475-4648-a892-af211cd21ad7"
+                "f35d86f5-567a-4989-bbdc-2af072f1aa12"
             ]
         }
     ]

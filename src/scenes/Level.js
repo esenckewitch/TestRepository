@@ -29,15 +29,15 @@ class Level extends Phaser.Scene {
 		arcadeimage_1.body.setOffset(-160, 119);
 		arcadeimage_1.body.setSize(2781, 88, false);
 
-		// hero
-		const hero = new Hero(this, 437, 322);
-		this.add.existing(hero);
-
 		// platform
 		const platform = new Platform(this, 816, 550);
 		this.add.existing(platform);
 		platform.scaleX = 0.3;
 		platform.scaleY = 0.3;
+
+		// hero
+		const hero = new Hero(this, this.spine, 687, 228);
+		this.add.existing(hero);
 
 		// lists
 		const colliders = [arcadeimage_1, platform];
