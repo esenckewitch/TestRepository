@@ -16,7 +16,14 @@ window.addEventListener('load', function () {
 				gravity: {y:500},
 				debug: true
 			}
-		}
+		},
+		plugins: {
+			scene: [{
+				key: "spine.SpinePlugin",
+				plugin: spine.SpinePlugin,
+				mapping: "spine"
+			  }]
+		  }
 	});
 
 	game.scene.add("Preload", Preload);
