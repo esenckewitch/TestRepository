@@ -30,7 +30,7 @@ class Level extends Phaser.Scene {
 		arcadeimage_1.body.setSize(2781, 88, false);
 
 		// hero
-		const hero = new Hero(this, 135, 446);
+		const hero = new Hero(this, 437, 322);
 		this.add.existing(hero);
 
 		// platform
@@ -44,6 +44,7 @@ class Level extends Phaser.Scene {
 		const players = [hero];
 
 		this.arcadeimage_1 = arcadeimage_1;
+		this.hero = hero;
 		this.colliders = colliders;
 		this.players = players;
 
@@ -52,6 +53,8 @@ class Level extends Phaser.Scene {
 
 	/** @type {Phaser.Physics.Arcade.Image} */
 	arcadeimage_1;
+	/** @type {Hero} */
+	hero;
 	/** @type {Array<Phaser.Physics.Arcade.Image|Platform>} */
 	colliders;
 	/** @type {Hero[]} */
@@ -76,6 +79,7 @@ class Level extends Phaser.Scene {
 	}
 
 	update() {
+
 		if (this.aKey.isDown) {
 			this.hero.left();
 		}

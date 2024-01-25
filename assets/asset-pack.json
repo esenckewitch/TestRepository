@@ -12,6 +12,16 @@
                 "type": "image"
             },
             {
+                "url": "assets/dog3/dog.json",
+                "type": "spineJson",
+                "key": "dog"
+            },
+            {
+                "url": "assets/dog3/dog.atlas",
+                "type": "spineAtlas",
+                "key": "dog-atlas"
+            },
+            {
                 "url": "assets/Fall.png",
                 "type": "image",
                 "key": "Fall"

@@ -44,8 +44,9 @@
                 "y"
             ],
             "label": "hero",
-            "x": 135,
-            "y": 446
+            "scope": "PUBLIC",
+            "x": 437,
+            "y": 322
         },
         {
             "prefabId": "81318de6-bf21-46d7-9abe-0dd0ea4cb14a",

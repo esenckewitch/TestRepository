@@ -8,16 +8,27 @@
     },
     "displayList": [
         {
-            "type": "ArcadeSprite",
-            "id": "6bc92e2b-3ebd-4e37-b5cb-59bb7607f454",
-            "label": "arcadesprite_1",
-            "texture": {
-                "key": "Fall"
-            },
+            "type": "Container",
+            "id": "a3774f8c-395e-4f46-bc0a-a6c96f705728",
+            "label": "container_1",
             "x": 555,
             "y": 297,
-            "body.width": 32,
-            "body.height": 32
+            "list": [
+                {
+                    "type": "SpineGameObject",
+                    "id": "fcd5e559-b450-4f34-9fd8-5a3adc278712",
+                    "label": "spinegameobject_1",
+                    "scope": "PUBLIC",
+                    "dataKey": "dog",
+                    "atlasKey": "dog-atlas",
+                    "skinName": "default",
+                    "x": -245,
+                    "y": -2,
+                    "ArcadeComponent.active": true,
+                    "body.width": 193.11641404372344,
+                    "body.height": 189.56380885575527
+                }
+            ]
         }
     ],
     "plainObjects": [],
