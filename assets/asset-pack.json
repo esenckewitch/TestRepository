@@ -2,14 +2,9 @@
     "section1": {
         "files": [
             {
-                "url": "assets/cat_2/cat.json",
-                "type": "json",
-                "key": "cat"
-            },
-            {
-                "url": "assets/cat_2/cat.atlas",
-                "type": "spineAtlas",
-                "key": "cat-atlas"
+                "url": "assets/bg.jpg",
+                "type": "image",
+                "key": "bg"
             },
             {
                 "url": "assets/dino.png",
@@ -20,6 +15,11 @@
                 "url": "assets/Fall.png",
                 "type": "image",
                 "key": "Fall"
+            },
+            {
+                "url": "assets/platform.png",
+                "type": "image",
+                "key": "platform"
             }
         ]
     },

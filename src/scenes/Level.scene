@@ -10,72 +10,57 @@
     },
     "displayList": [
         {
-            "prefabId": "6839efa3-2191-42d2-83ac-c45807ea57f2",
-            "id": "3a1adc9a-6be2-4253-9030-bf47cde5b36c",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "prefab",
-            "x": 859,
-            "y": 165
-        },
-        {
-            "prefabId": "74cfc862-d52f-4168-8d5c-e031f68e8a9f",
-            "id": "dc688020-8434-47f4-b003-80b0a6d53135",
-            "unlock": [
-                "x",
-                "y",
-                "immovable",
-                "allowGravity"
-            ],
-            "label": "colide",
-            "x": 729,
-            "y": 554,
-            "allowGravity": false,
-            "immovable": false
-        },
-        {
             "type": "Image",
-            "id": "d4266617-8289-4247-b041-986dfbac10d4",
-            "label": "fall",
+            "id": "2df11a75-b54c-4feb-8f0f-33ee1377633a",
+            "label": "bg",
             "texture": {
-                "key": "Fall"
+                "key": "bg"
             },
-            "x": 1142,
-            "y": -11,
-            "scaleX": 10,
-            "scaleY": 10
+            "y": -100,
+            "originX": 0,
+            "originY": 0
         },
         {
-            "prefabId": "6839efa3-2191-42d2-83ac-c45807ea57f2",
-            "id": "62cdb470-c524-4489-8f12-798cb6a17cd3",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "prefab_1",
+            "type": "ArcadeImage",
+            "id": "d403b5f5-68ef-4737-9d6c-49d7fdd03f67",
+            "label": "arcadeimage_1",
             "scope": "PUBLIC",
-            "x": 1126,
-            "y": 308
+            "texture": {},
+            "x": 188,
+            "y": 513,
+            "allowGravity": false,
+            "pushable": false,
+            "immovable": true,
+            "body.width": 2781,
+            "body.height": 88,
+            "body.offset.x": -160,
+            "body.offset.y": 119
         },
         {
             "prefabId": "82ab5bb1-96d7-4852-bf27-13f00b320c54",
-            "id": "b40e0f90-8e1b-4819-9c34-5aa827c5dbe2",
+            "id": "d8a31456-d475-4648-a892-af211cd21ad7",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "hero",
+            "x": 135,
+            "y": 446
+        },
+        {
+            "prefabId": "81318de6-bf21-46d7-9abe-0dd0ea4cb14a",
+            "id": "8dc92328-497e-4ccb-a005-71ff31d20ce8",
             "unlock": [
                 "x",
                 "y",
                 "scaleX",
-                "scaleY",
-                "collideWorldBounds"
+                "scaleY"
             ],
-            "label": "hero",
-            "scope": "PUBLIC",
-            "x": 395,
-            "y": 481,
-            "scaleX": 11,
-            "scaleY": 11,
-            "collideWorldBounds": true
+            "label": "platform",
+            "x": 816,
+            "y": 550,
+            "scaleX": 0.3,
+            "scaleY": 0.3
         }
     ],
     "plainObjects": [],
@@ -90,15 +75,15 @@
             "id": "c2238dae-33d0-45fc-b3b5-e86fafd59800",
             "label": "colliders",
             "objectIds": [
-                "dc688020-8434-47f4-b003-80b0a6d53135"
+                "d403b5f5-68ef-4737-9d6c-49d7fdd03f67",
+                "8dc92328-497e-4ccb-a005-71ff31d20ce8"
             ]
         },
         {
             "id": "b218aee8-8685-4029-8b75-92b24223247f",
             "label": "players",
             "objectIds": [
-                "3a1adc9a-6be2-4253-9030-bf47cde5b36c",
-                "62cdb470-c524-4489-8f12-798cb6a17cd3"
+                "d8a31456-d475-4648-a892-af211cd21ad7"
             ]
         }
     ]
