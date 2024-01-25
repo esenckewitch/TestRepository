@@ -16,51 +16,44 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// prefab
-		const prefab = new Prefab(this, 859, 165);
-		this.add.existing(prefab);
+		// bg
+		const bg = this.add.image(0, -100, "bg");
+		bg.setOrigin(0, 0);
 
-		// colide
-		const colide = new Colide(this, 729, 554);
-		this.add.existing(colide);
-		colide.body.allowGravity = false;
-		colide.body.immovable = false;
-
-		// fall
-		const fall = this.add.image(1142, -11, "Fall");
-		fall.scaleX = 10;
-		fall.scaleY = 10;
-
-		// prefab_1
-		const prefab_1 = new Prefab(this, 1126, 308);
-		this.add.existing(prefab_1);
+		// arcadeimage_1
+		const arcadeimage_1 = this.physics.add.image(188, 513, "_MISSING");
+		arcadeimage_1.body.allowGravity = false;
+		arcadeimage_1.body.pushable = false;
+		arcadeimage_1.body.immovable = true;
+		arcadeimage_1.body.setOffset(-160, 119);
+		arcadeimage_1.body.setSize(2781, 88, false);
 
 		// hero
-		const hero = new Hero(this, 395, 481);
+		const hero = new Hero(this, 135, 446);
 		this.add.existing(hero);
-		hero.scaleX = 11;
-		hero.scaleY = 11;
-		hero.body.collideWorldBounds = true;
+
+		// platform
+		const platform = new Platform(this, 816, 550);
+		this.add.existing(platform);
+		platform.scaleX = 0.3;
+		platform.scaleY = 0.3;
 
 		// lists
-		const colliders = [colide];
-		const players = [prefab, prefab_1];
+		const colliders = [arcadeimage_1, platform];
+		const players = [hero];
 
-		this.prefab_1 = prefab_1;
-		this.hero = hero;
+		this.arcadeimage_1 = arcadeimage_1;
 		this.colliders = colliders;
 		this.players = players;
 
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Prefab} */
-	prefab_1;
-	/** @type {Hero} */
-	hero;
-	/** @type {Colide[]} */
+	/** @type {Phaser.Physics.Arcade.Image} */
+	arcadeimage_1;
+	/** @type {Array<Phaser.Physics.Arcade.Image|Platform>} */
 	colliders;
-	/** @type {Prefab[]} */
+	/** @type {Hero[]} */
 	players;
 
 	/* START-USER-CODE */
