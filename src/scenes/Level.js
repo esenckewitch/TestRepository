@@ -16,58 +16,57 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// dino
-		const dino = this.add.image(640, 288, "dino");
-		dino.setInteractive(new Phaser.Geom.Rectangle(0, 0, 250, 250), Phaser.Geom.Rectangle.Contains);
+		// prefab
+		const prefab = new Prefab(this, 859, 165);
+		this.add.existing(prefab);
 
-		// onPointerDownScript
-		const onPointerDownScript = new OnPointerDownScript(dino);
+		// colide
+		const colide = new Colide(this, 729, 554);
+		this.add.existing(colide);
+		colide.body.allowGravity = false;
+		colide.body.immovable = false;
 
-		// pushActionScript
-		new PushActionScript(onPointerDownScript);
+		// fall
+		const fall = this.add.image(142, 194, "Fall");
+		fall.scaleX = 10;
+		fall.scaleY = 10;
 
-		// onAwakeScript
-		const onAwakeScript = new OnAwakeScript(dino);
+		// prefab_1
+		const prefab_1 = new Prefab(this, 558, 115);
+		this.add.existing(prefab_1);
 
-		// moveInSceneActionScript
-		const moveInSceneActionScript = new MoveInSceneActionScript(onAwakeScript);
+		// lists
+		const colliders = [colide];
+		const players = [prefab, prefab_1];
 
-		// welcome
-		const welcome = this.add.text(640, 478, "", {});
-		welcome.setOrigin(0.5, 0.5);
-		welcome.text = "Phaser 3 + Phaser Editor 2D";
-		welcome.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
-
-		// onAwakeScript_1
-		const onAwakeScript_1 = new OnAwakeScript(welcome);
-
-		// fadeActionScript
-		const fadeActionScript = new FadeActionScript(onAwakeScript_1);
-
-		// moveInSceneActionScript (prefab fields)
-		moveInSceneActionScript.from = "TOP";
-
-		// moveInSceneActionScript (components)
-		const moveInSceneActionScriptDurationConfigComp = new DurationConfigComp(moveInSceneActionScript);
-		moveInSceneActionScriptDurationConfigComp.duration = 1000;
-
-		// fadeActionScript (prefab fields)
-		fadeActionScript.fadeDirection = "FadeIn";
-
-		// fadeActionScript (components)
-		const fadeActionScriptDurationConfigComp = new DurationConfigComp(fadeActionScript);
-		fadeActionScriptDurationConfigComp.duration = 1500;
+		this.prefab_1 = prefab_1;
+		this.colliders = colliders;
+		this.players = players;
 
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Prefab} */
+	prefab_1;
+	/** @type {Colide[]} */
+	colliders;
+	/** @type {Prefab[]} */
+	players;
+
 	/* START-USER-CODE */
 
-	// Write more your code here
+	// Write your code here
 
 	create() {
-
 		this.editorCreate();
+		this.physics.add.collider(this.players, this.colliders);
+		let camera = this.cameras.main;
+		camera.setViewport(0, 0, 1280, 720);
+		camera.startFollow(this.prefab_1);
+		camera.setPostPipeline()
+	}
+
+	update(){
 	}
 
 	/* END-USER-CODE */

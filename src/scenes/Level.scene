@@ -10,85 +10,54 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "7d5827fd-34f6-473f-90e0-b9424a51d5fa",
-            "label": "dino",
-            "hitArea.shape": "RECTANGLE",
-            "hitArea.width": 250,
-            "hitArea.height": 250,
-            "texture": {
-                "key": "dino"
-            },
-            "x": 640,
-            "y": 288,
-            "list": [
-                {
-                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
-                    "id": "f10cc69a-251a-4bca-81de-f36affc5660b",
-                    "label": "onPointerDownScript",
-                    "list": [
-                        {
-                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
-                            "id": "56235873-9538-4e47-ad25-cd1e90b15b55",
-                            "label": "pushActionScript"
-                        }
-                    ]
-                },
-                {
-                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
-                    "id": "462f8b1c-5491-4b71-bfd9-2117963748b4",
-                    "label": "onAwakeScript",
-                    "list": [
-                        {
-                            "prefabId": "3d337935-cdca-4937-9126-9f75bc2486de",
-                            "id": "cbb22a0e-7823-45c8-a238-90a531752c00",
-                            "unlock": [
-                                "from"
-                            ],
-                            "label": "moveInSceneActionScript",
-                            "from": "TOP",
-                            "components": [
-                                "DurationConfigComp"
-                            ],
-                            "DurationConfigComp.duration": 1000
-                        }
-                    ]
-                }
-            ]
+            "prefabId": "6839efa3-2191-42d2-83ac-c45807ea57f2",
+            "id": "3a1adc9a-6be2-4253-9030-bf47cde5b36c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "prefab",
+            "x": 859,
+            "y": 165
         },
         {
-            "type": "Text",
-            "id": "b2b3dbd5-2106-41fa-8a04-9b511e3401a9",
-            "label": "welcome",
-            "x": 640,
-            "y": 478,
-            "originX": 0.5,
-            "originY": 0.5,
-            "text": "Phaser 3 + Phaser Editor 2D",
-            "fontFamily": "Arial",
-            "fontSize": "30px",
-            "list": [
-                {
-                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
-                    "id": "78e2cecc-8445-45e8-bb7d-567f39c97d9c",
-                    "label": "onAwakeScript_1",
-                    "list": [
-                        {
-                            "prefabId": "978fd4e0-a722-4061-a6d9-86748db8a38a",
-                            "id": "9e9ce046-41b1-40fd-8c59-620a4df7fcaf",
-                            "unlock": [
-                                "fadeDirection"
-                            ],
-                            "label": "fadeActionScript",
-                            "fadeDirection": "FadeIn",
-                            "components": [
-                                "DurationConfigComp"
-                            ],
-                            "DurationConfigComp.duration": 1500
-                        }
-                    ]
-                }
-            ]
+            "prefabId": "74cfc862-d52f-4168-8d5c-e031f68e8a9f",
+            "id": "dc688020-8434-47f4-b003-80b0a6d53135",
+            "unlock": [
+                "x",
+                "y",
+                "immovable",
+                "allowGravity"
+            ],
+            "label": "colide",
+            "x": 729,
+            "y": 554,
+            "allowGravity": false,
+            "immovable": false
+        },
+        {
+            "type": "Image",
+            "id": "d4266617-8289-4247-b041-986dfbac10d4",
+            "label": "fall",
+            "texture": {
+                "key": "Fall"
+            },
+            "x": 142,
+            "y": 194,
+            "scaleX": 10,
+            "scaleY": 10
+        },
+        {
+            "prefabId": "6839efa3-2191-42d2-83ac-c45807ea57f2",
+            "id": "62cdb470-c524-4489-8f12-798cb6a17cd3",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "prefab_1",
+            "scope": "PUBLIC",
+            "x": 558,
+            "y": 115
         }
     ],
     "plainObjects": [],
@@ -97,5 +66,22 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "c2238dae-33d0-45fc-b3b5-e86fafd59800",
+            "label": "colliders",
+            "objectIds": [
+                "dc688020-8434-47f4-b003-80b0a6d53135"
+            ]
+        },
+        {
+            "id": "b218aee8-8685-4029-8b75-92b24223247f",
+            "label": "players",
+            "objectIds": [
+                "3a1adc9a-6be2-4253-9030-bf47cde5b36c",
+                "62cdb470-c524-4489-8f12-798cb6a17cd3"
+            ]
+        }
+    ]
 }
