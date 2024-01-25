@@ -9,6 +9,7 @@ class Level extends Phaser.Scene {
 		super("Level");
 
 		/* START-USER-CTR-CODE */
+		this.holdButtons = {};
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
@@ -72,22 +73,27 @@ class Level extends Phaser.Scene {
 		this.physics.add.collider(this.players, this.colliders);
 		let camera = this.cameras.main;
 
+		this.aKey = this.input.keyboard.addKey("A");
+		this.dKey = this.input.keyboard.addKey("D");
+		this.spKey = this.input.keyboard.addKey("Space");
+
 		// camera.setViewport(0, 0, 1280, 720);
 		// camera.startFollow(this.hero);
 		// camera.setPostPipeline()
 	}
 
+	update() {
+		if (this.aKey.isDown) {
+			this.hero.left();
+		}
 
-	/**
-	 * Добавляет элемент управления
-	 *
-	 * @param {"up" or "down"} state Состояние кнопки.
-	 */
-	addControl(key, state, func) {
-		this.input.keyboard.addKey(key).on(state, func);
-	}
+		if (this.dKey.isDown) {
+			this.hero.right();
+		}
 
-	update(){
+		if (this.spKey.isDown) {
+			this.hero.jump();
+		}
 	}
 
 	/* END-USER-CODE */

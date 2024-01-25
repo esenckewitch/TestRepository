@@ -2,6 +2,16 @@
     "section1": {
         "files": [
             {
+                "url": "assets/cat_2/cat.json",
+                "type": "json",
+                "key": "cat"
+            },
+            {
+                "url": "assets/cat_2/cat.atlas",
+                "type": "spineAtlas",
+                "key": "cat-atlas"
+            },
+            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"

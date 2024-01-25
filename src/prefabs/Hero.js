@@ -14,7 +14,8 @@ class Hero extends Phaser.Physics.Arcade.Sprite {
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 
-		this.addControl(scene);
+		this.body.maxSpeed = 200;
+		console.log(this.controller);
 
 		/* END-USER-CTR-CODE */
 	}
@@ -22,23 +23,16 @@ class Hero extends Phaser.Physics.Arcade.Sprite {
 	/* START-USER-CODE */
 
 	right() {
-		this.setVelocityX(100);
+		this.setAccelerationX(150);
 	}
 
 	left() {
-		this.setVelocityX(-100);
+		this.setAccelerationX(-150);
 	}
 
 	jump() {
-		if (this) {
-			this.setVelocityY(-300);
-		}
-	}
-
-	addControl(scene) {
-		scene.addControl("Space", "down", this.jump.bind(this));
-		scene.addControl("A", "down", this.left.bind(this));
-		scene.addControl("D", "down", this.right.bind(this));
+		console.log(this.body.velocity.x);
+		this.setVelocity(this.body.velocity.x, -300);
 	}
 
 	/* END-USER-CODE */
