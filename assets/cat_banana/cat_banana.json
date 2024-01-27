@@ -1,0 +1,33 @@
+{
+"skeleton": {
+	"hash": "zj6HC2Va4Ag",
+	"spine": "4.0.58",
+	"x": -30,
+	"y": -47,
+	"width": 60,
+	"height": 94,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "banana_cat", "bone": "root", "attachment": "banana_cat" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"banana_cat": {
+				"banana_cat": { "width": 60, "height": 94 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {},
+	"jump": {},
+	"move": {}
+}
+}
